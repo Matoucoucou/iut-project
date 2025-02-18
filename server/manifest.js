@@ -59,31 +59,7 @@ module.exports = new Confidence.Store({
                         migrateOnStart: false
                     }
                 }
-            },
-            {
-                plugin  : '@hapipal/schwifty',
-                options : {
-                    $filter    : 'NODE_ENV',
-                    $default   : {},
-                    $base      : {
-                        migrateOnStart : true,
-                        knex           : {
-                            client     : 'mysql',
-                            connection : {
-                                host     : process.env.DB_HOST,
-                                user     : process.env.DB_USER,
-                                password : process.env.DB_PASSWORD,
-                                database : process.env.DB_DATABASE,
-                                port     : process.env.DB_PORT
-                            }
-                        }
-                    },
-                    production : {
-                        migrateOnStart : false
-                    }
-                }
-            },
-            {
+            },{
                 plugin: {
                     $filter: { $env: 'NODE_ENV' },
                     $default: '@hapipal/hpal-debug',
