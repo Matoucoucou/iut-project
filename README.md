@@ -69,6 +69,7 @@ Le port est défini lors de la création du container Docker.
 
 - `POST /user/favorites` : Ajoute un favori pour un utilisateur (authentification requise, scope : user)
 - `GET /user/{id}/favorites` : Récupère les favoris d'un utilisateur par ID (authentification requise, scope : user, admin)
+- `DELETE /user/{id}/favorites` : Supprime un favori par ID (authentification requise, scope : user)
 
 ### Films
 - `GET /movies` : Récupère tous les films (authentification requise, scope : user, admin)
